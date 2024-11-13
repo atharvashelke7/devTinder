@@ -1,0 +1,8 @@
+- initialize git
+- .gitignore
+- create a remote repo on github
+- push all code to remote origin
+- You have to play with routes and route extension ex. /hello / hello/2
+- Order of the route matters a lot
+- Install Postman app and make a workshop collection -> test API call
+- Write Logic to handle GET, POST, PATCH, PUT, DELETE API Calls and test Them on Postman
