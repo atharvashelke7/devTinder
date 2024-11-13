@@ -6,3 +6,7 @@
 - Order of the route matters a lot
 - Install Postman app and make a workshop collection -> test API call
 - Write Logic to handle GET, POST, PATCH, PUT, DELETE API Calls and test Them on Postman
+- Explore Routing and use of ?,+,(),\* in the routes
+- Use of Regex in routes /a/ , /.\*fly$/
+- How to Readin the Query Params In the route
+- Reading the dynamic routes
