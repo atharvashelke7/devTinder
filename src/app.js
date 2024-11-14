@@ -1,24 +1,20 @@
 const express = require("express");
 const app = express();
+const { adminAuth, userAuth } = require("./middlewares/authMiddleware");
 
-app.use("/user", [
-  (req, res, next) => {
-    console.log("Handling the 1st route user");
-    next();
-  },
-  (req, res, next) => {
-    console.log("Handling the 2nd route user");
-    next();
-  },
-  (req, res, next) => {
-    console.log("Handling the 3rd route user");
-    next();
-  },
-  (req, res) => {
-    console.log("Handling the 4th route user");
-    res.send("4th Response");
-  },
-]);
+app.use("/admin", adminAuth);
+
+app.get("/user", userAuth, (req, res) => {
+  res.send("All user data");
+});
+
+app.get("/admin/getAllData", (req, res) => {
+  res.send("All data sent");
+});
+
+app.get("/admin/deleteUser", (req, res) => {
+  res.send("Delete All the Data");
+});
 
 app.listen(3000, () => {
   console.log("Sever is running on port 3000");

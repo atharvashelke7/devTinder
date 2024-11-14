@@ -10,3 +10,11 @@
 - Use of Regex in routes /a/ , /.\*fly$/
 - How to Readin the Query Params In the route
 - Reading the dynamic routes
+- Multiple Route Handler - Play with the code
+- next()
+- next function error along with the code
+- What is a MiddleWare why do we need it
+- How express js basically handles request behind the scenes
+- Difference between app.use and app.all
+- Write a dummy auth middleware for admin
+- write a dummy auth middleware for user routes except /user/login
