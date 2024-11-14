@@ -1,20 +1,17 @@
 const express = require("express");
 const app = express();
-const { adminAuth, userAuth } = require("./middlewares/authMiddleware");
 
-app.use("/admin", adminAuth);
-
-app.get("/user", userAuth, (req, res) => {
-  res.send("All user data");
+app.get("/getUserData", (req, res) => {
+  //logic of db call and get user data
+  try {
+    throw new Error("dvbj");
+    res.send("user data sent");
+  } catch (error) {
+    res.status(500).send("Something went Wrond contact the help center")
+  }
 });
 
-app.get("/admin/getAllData", (req, res) => {
-  res.send("All data sent");
-});
 
-app.get("/admin/deleteUser", (req, res) => {
-  res.send("Delete All the Data");
-});
 
 app.listen(3000, () => {
   console.log("Sever is running on port 3000");
