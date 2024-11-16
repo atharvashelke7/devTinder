@@ -28,3 +28,10 @@
 - Error Handling
 - Add the express.json() middleware to the app
 - make the signup API dynamic to receive data from the end user
+- User.findOne with duplicate emailId which object will be written
+- API GET user by email
+- API - Feed - get all the users from the database
+- Api - Get userbyId (findById)
+- API to Update
+- API For Delete
+- Explore the mongoose Documentation for model apis 
