@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/database");
 const app = express();
 const User = require("./models/user");
+const validator = require("validator");
 
 app.use(express.json()); // convert json into js Object
 
@@ -62,6 +63,8 @@ app.delete("/user", async (req, res) => {
 app.patch("/user/:userId", async (req, res) => {
   const userId = req.params?.userId;
   const data = req.body;
+  // const regex =
+  //   /^[-!#$%&'*+/0-9=?A-Z^_a-z{|}~](.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*.?[a-zA-Z0-9])*.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   try {
     const ALLOWED_UPDATES = ["photoUrl", "about", "gender", "age", "skills"];
@@ -76,6 +79,7 @@ app.patch("/user/:userId", async (req, res) => {
     if (data?.skills.length > 10) {
       throw new Error("Skills cannot be more than 10");
     }
+   
     const user = await User.findByIdAndUpdate({ _id: userId }, data, {
       returnDocument: "after",
       runValidators: true,
