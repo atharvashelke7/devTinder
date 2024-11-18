@@ -8,7 +8,6 @@ app.use(express.json()); // convert json into js Object
 app.post("/signup", async (req, res) => {
   //  Creating a new Instance of a User Model
   const user = new User(req.body);
-  console.log(user);
 
   try {
     await user.save(); // user is saved in the db
@@ -66,11 +65,12 @@ app.patch("/user", async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate({ _id: userId }, data, {
       returnDocument: "after",
+      runValidators: true,
     });
     console.log(user);
     res.send("user update successfully");
   } catch (error) {
-    res.status(400).send("something went wrong");
+    res.status(400).send("UPDATE FAILED" + error.message);
   }
 });
 

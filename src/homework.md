@@ -34,4 +34,11 @@
 - Api - Get userbyId (findById)
 - API to Update
 - API For Delete
-- Explore the mongoose Documentation for model apis 
+- Explore the mongoose Documentation for model apis
+- What are options in a model.findOneAndUpdate method, explore more about it
+- Explore schema type options from the documentation
+- add required unique lowercase min trim minLength
+- add default
+- add custom validate function for checking the gender
+- improve the db schema - Put all required or appropiate validation in schema
+- Add timestamps to the user schema
