@@ -46,3 +46,9 @@
 - Add api validation for each field (DATA SANITIZATION)
 - Install validator
 - Explore validator library function and use validator function for password,email
+- Never trust req.body
+- Validate data in Signup API
+- Install bcrypt package
+- Create a password hash using bcrypt.hash and save the user with encrypted password
+- Create a login api 
+- Compare passwords and throw errors if email or password is invalid
