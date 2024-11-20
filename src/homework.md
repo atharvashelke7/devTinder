@@ -52,3 +52,4 @@
 - Create a password hash using bcrypt.hash and save the user with encrypted password
 - Create a login api 
 - Compare passwords and throw errors if email or password is invalid
+- JWT, Cookies,cookie-parser,Auth-middleware
