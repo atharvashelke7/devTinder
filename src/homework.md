@@ -59,6 +59,8 @@
 - In login api create a jwt token
 - In login api after emaol and password validation create a jwt token and send it to user in cookie
 - read the cookie inside your profile api and the logged in user
-- Write user auth middleware 
+- Write user auth middleware
 - add the userauth middleware profile api and a new sendConnection
 - Set expiry of jwt token and cookies to 7 days
+- Create userSchema method to getJWT()
+- create userSchema method to comparepassword(passwordInputByUser)
