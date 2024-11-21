@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-var validator = require("validator");
+const validator = require("validator");
 
 const userSchema = new mongoose.Schema(
   {
@@ -19,8 +19,8 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
       validate(value) {
-        if (validator.isEmail(value)) {
-          throw new Error("Invalid email  address");
+        if (!validator.isEmail(value)) {
+          throw new Error("Invalid email  address: " + value);
         }
       },
     },
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       validate(value) {
         if (!validator.isStrongPassword(value)) {
-          throw new Error("Enter a strong password:" + value);
+          throw new Error("Enter a strong password: " + value);
         }
       },
     },
@@ -50,8 +50,8 @@ const userSchema = new mongoose.Schema(
       default:
         "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
       validate(value) {
-        if (validator.isURL(value)) {
-          throw new Error("Invalid URL");
+        if (!validator.isURL(value)) {
+          throw new Error("Invalid URL Address: " + value);
         }
       },
     },
@@ -65,5 +65,15 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+userSchema.methods.getJWT = async function () {
+  const user = this;
+
+  const token = await jwt.sign({ _id: user._id }, "DEV@Tinder$790", {
+    expiresIn: "7d",
+  });
+
+  return token;
+};
 
 module.exports = mongoose.model("User", userSchema);

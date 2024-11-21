@@ -50,6 +50,15 @@
 - Validate data in Signup API
 - Install bcrypt package
 - Create a password hash using bcrypt.hash and save the user with encrypted password
-- Create a login api 
+- Create a login api
 - Compare passwords and throw errors if email or password is invalid
 - JWT, Cookies,cookie-parser,Auth-middleware
+- Install cookie-parser
+- Just send a dummy cookie to the user
+- GET /profile api and check if you get the cookie back
+- In login api create a jwt token
+- In login api after emaol and password validation create a jwt token and send it to user in cookie
+- read the cookie inside your profile api and the logged in user
+- Write user auth middleware 
+- add the userauth middleware profile api and a new sendConnection
+- Set expiry of jwt token and cookies to 7 days
