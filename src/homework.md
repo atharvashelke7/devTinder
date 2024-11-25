@@ -76,3 +76,10 @@
 - Create Your Patch /profile/edit
 - Create PATCH /profile/password API => forgot password APi
 - Make sure you validate all data in every post patch apis
+- Read this article about compound index
+- why do we need index in db
+- What is the advantages and disadvantages of creating
+- Proper validation of Data
+- Think about corner cases
+- Logical queries in mongoose
+- Schema.pre("save") function
