@@ -83,3 +83,4 @@
 - Think about corner cases
 - Logical queries in mongoose
 - Schema.pre("save") function
+- Write code with proper validation for accepted request
