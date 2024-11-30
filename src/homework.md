@@ -84,3 +84,7 @@
 - Logical queries in mongoose
 - Schema.pre("save") function
 - Write code with proper validation for accepted request
+- Thought process - POST VS GET 
+- Read about ref and populate 
+- Create API Get for /request/received with all the checks 
+

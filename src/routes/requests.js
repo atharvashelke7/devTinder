@@ -99,8 +99,8 @@ requestRouter.post(
       connectionRequest.status = status;
 
       // Modify and saves it
-
       const data = await connectionRequest.save();
+
       res.json({ message: "Connection request " + status, data });
     } catch (error) {
       res.status(400).send("ERROR: " + error.message);

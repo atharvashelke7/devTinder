@@ -21,8 +21,8 @@
 
 ## userRouter
 
--GET /user/connections
 -GET /user/requests
+-GET /user/connections
 -GET /user/feed - Gets you the proflies of user on platform
 
 Status: Igonored,interested,accepted,rejected
