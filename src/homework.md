@@ -84,7 +84,20 @@
 - Logical queries in mongoose
 - Schema.pre("save") function
 - Write code with proper validation for accepted request
-- Thought process - POST VS GET 
-- Read about ref and populate 
-- Create API Get for /request/received with all the checks 
+- Thought process - POST VS GET
+- Read about ref and populate
+- Create API Get for /request/received with all the checks
+- Logic for Get / feed API
+- Explore the $nin, $ne and other methods
+- Pagination
 
+/feed?page=1&limit=10 => first 10 users 1-10 => .skip(0) & .limit(10)
+
+/ feed?page=2&limit=10 => 11-20 => .skip(10) & .limit(10)
+
+/ feed?page=3&limit=10 => 21-30 => .skip(20) & .limit(30)
+
+.skip(0) & .limit(10) // skip means skip from starting and limit means how many documents
+
+
+skip = (page - 1 )*limit
